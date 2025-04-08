@@ -1,0 +1,26 @@
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+SC&display=swap");
+  
+body {
+  background-color: #cf82c8;
+  color: #ffc1ec;
+  font-size: 30px;
+  line-height: 30px;
+  word-wrap: anywhere;
+  font-family: "Noto Serif SC";
+}
+</style>
+<body></body>
+
+<script>
+let i = 0
+while (i < 1000) {
+  if (Math.random() > 0.5) {
+    document.body.innerText += '／'
+  } else  {
+    document.body.innerText += '＼'
+  }
+  i++
+}
+
+</script>
