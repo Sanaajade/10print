@@ -2,25 +2,61 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+SC&display=swap");
   
 body {
-  background-color: #cf82c8;
-  color: #ffc1ec;
-  font-size: 30px;
+  background-color: #fffc5316;
+  color: #548ccb;
+  font-size: 20px;
   line-height: 30px;
   word-wrap: anywhere;
   font-family: "Noto Serif SC";
+  width: 100%;
+  height: 100%;
+  animation: float 10s ease-in-out infinite;
+  opacity: 0.6;
+  animation-duration: 15s;
+  animation-delay: 1s;
 }
+  
+    @keyframes float {
+    0% {
+      transform: translateY(0) translateX(0) rotate(0deg);
+      opacity: 0.1;
+    }
+    50% {
+    transform: translateY(-50px) translateX(350px) rotate(15deg);
+    opacity: 0.4;
+    }
+    75% {
+    transform: translateY(-50px) translateX(-300px) rotate(45deg);
+    opacity: 0.7;
+    }
+    100% {
+    transform: translateY(0px) translateX(500px) rotate(60deg);
+    opacity: 1.0;
+    }
+  }
+  
+  @keyframes {
+    0% {
+      scroll-behavior: translateY(0) translateX(0) rotate(0deg);
+      opacity: 0.1;
+    }
+    100% {
+    scroll-behavior: translateY(0px) translateX(500px) rotate(60deg);
+    opacity: 1.0;
+    }
+  }
 </style>
 <body></body>
 
 <script>
 let i = 0
-while (i < 1000) {
+while (i < 200) {
   if (Math.random() > 0.5) {
-    document.body.innerText += '／'
-  } else  {
-    document.body.innerText += '＼'
+    document.body.innerText += '(◕‿◕✿)'
+  } else {
+    document.body.innerText += '  ʕ·ᴥ·ʔ'
   }
+  window.scrollTo(0, document.body.offsetHeight);
   i++
 }
-
 </script>
